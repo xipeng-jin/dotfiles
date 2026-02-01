@@ -1,0 +1,42 @@
+(defsrc
+  esc     f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     q    w    e    r    t       y    u    i    o    p       [    ]    \ 
+  caps    a    s    d    f    g       h    j    k    l    ;       '    ret 
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  fn  lctl  lalt  lmet           spc            rmet  ralt
+)
+
+(defcfg
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+)
+
+(deflayer default
+  caps    🔅   🔆   mctl sls  dtn     dnd  ◀◀   ▶⏸   ▶▶   🔇      🔉   🔊
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     q    w    e    r    t       y    u    i    o    p       [    ]    \ 
+  @esc    a    s    d    f    g       h    j    k    l    ;       '    ret 
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  fn  lctl  lalt  lmet           @spc           rmet  ralt
+)
+
+(deflayer symbol
+  caps    f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     S-6  [    ]    S-8  +       S-7  S-3  S-[  S-]  S-4     [    ]    \ 
+  esc     S-1  S-,  S-.  -    =       S-5  S-\  S-9  S-0  S-/     S-2  ret 
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  fn  lctl  lalt  lmet           spc            rmet  ralt
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+  slow-hold-time 250
+)
+
+(defalias
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle symbol))
+  esc (tap-hold $tap-time $slow-hold-time esc lctl)
+)
