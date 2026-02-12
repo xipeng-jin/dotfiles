@@ -1,0 +1,41 @@
+# For help with configuration see https://github.com/rszyma/kanata-tray/blob/main/README.md#configuration
+'$schema' = 'https://raw.githubusercontent.com/rszyma/kanata-tray/main/doc/config_schema.json'
+
+[general]
+allow_concurrent_presets = false # (default: false)
+
+# Optional TCP control server to listen for remote commands, such as stopping/starting a preset.
+# Reference: https://github.com/rszyma/kanata-tray/blob/main/doc/control_server.md
+control_server_enable = false # (default: false)
+
+[defaults]
+kanata_executable = '~/Program/kanata/target/release/kanata' # if empty or omitted, system $PATH will be searched.
+kanata_config = '' # if empty or not omitted, kanata default config locations will be used.
+tcp_port = 5829 # (default: 5829)
+autorestart_on_crash = false # (default: false)
+
+[defaults.trackpad_while_typing]
+enabled = false
+keyboard_device = "auto:kanata"  # or "/dev/input/eventX"
+pointer_device = "auto:touchpad" # or exact Hyprland mouse name
+trigger_key = "KEY_FN"           # KEY_FN | KEY_LEFTALT | KEY_RIGHTALT
+
+# [defaults.hooks]
+# Hooks allow running custom commands on specific events (e.g. starting preset).
+# Reference: https://github.com/rszyma/kanata-tray/blob/main/doc/hooks.md
+
+# [defaults.layer_icons]
+# mouse = 'mouse.png'
+# qwerty = 'qwerty.ico'
+# '*' = 'other_layers.ico'
+
+[presets.'main cfg']
+kanata_config = '~/.config/kanata/MyKanata.kbd'
+autorun = true
+# kanata_executable = ''
+# layer_icons = {  }
+# tcp_port = 1234
+# extra_args = ['-n', '-c=~/.config/kanata/another.kbd']
+
+# [presets.'test cfg']
+# kanata_config = '~/.config/kanata/test.kbd'
