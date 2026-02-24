@@ -1,13 +1,21 @@
-# [target.x86_64-unknown-linux-gnu]
-# linker = "clang"
-# rustflags = ["-C", "link-arg=--ld-path=wild"]
-#
+[target.x86_64-unknown-linux-gnu]
+linker = "clang"
+rustflags = ["-C", "link-arg=--ld-path=wild"]
+
+[target.aarch64-unknown-linux-gnu]
+linker = "clang"
+rustflags = ["-C", "link-arg=--ld-path=wild"]
+
 # [target.aarch64-unknown-linux-gnu]
 # linker = "clang"
 # rustflags = ["-C", "link-arg=--ld-path=/home/xipengjin/Program/ZedIndustries/MyFork/wild/target/release/wild", "-C", "target-feature=+fp16"]
+#
+# [target.'cfg(target_os = "linux")']
+# rustflags = [
+#   "-C", "link-arg=-fuse-ld=mold",
+#   "-C", "target-feature=+fp16"
+# ]
 
-[target.'cfg(target_os = "linux")']
-rustflags = [
-  "-C", "link-arg=-fuse-ld=mold",
-  "-C", "target-feature=+fp16"
-]
+[env]
+WGPU_BACKEND = "vulkan"
+VK_DRIVER_FILES = "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"

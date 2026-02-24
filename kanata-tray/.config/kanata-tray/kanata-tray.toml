@@ -9,7 +9,7 @@ allow_concurrent_presets = false # (default: false)
 control_server_enable = false # (default: false)
 
 [defaults]
-kanata_executable = '~/Program/kanata/target/release/kanata' # if empty or omitted, system $PATH will be searched.
+kanata_executable = '/home/xjin/Program/build/kanata/target/release/kanata' # if empty or omitted, system $PATH will be searched.
 kanata_config = '' # if empty or not omitted, kanata default config locations will be used.
 tcp_port = 5829 # (default: 5829)
 autorestart_on_crash = false # (default: false)
@@ -30,7 +30,7 @@ trigger_key = "KEY_FN"           # KEY_FN | KEY_LEFTALT | KEY_RIGHTALT
 # '*' = 'other_layers.ico'
 
 [presets.'main cfg']
-kanata_config = '~/.config/kanata/MyKanata.kbd'
+kanata_config = '/home/xjin/.config/kanata-tray/mykanata-linux.kbd'
 autorun = true
 # kanata_executable = ''
 # layer_icons = {  }
