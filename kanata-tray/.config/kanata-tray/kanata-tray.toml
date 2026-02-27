@@ -15,7 +15,7 @@ tcp_port = 5829 # (default: 5829)
 autorestart_on_crash = false # (default: false)
 
 [defaults.trackpad_while_typing]
-enabled = false
+enabled = true
 keyboard_device = "auto:kanata"  # or "/dev/input/eventX"
 pointer_device = "auto:touchpad" # or exact Hyprland mouse name
 trigger_key = "KEY_FN"           # KEY_FN | KEY_LEFTALT | KEY_RIGHTALT
