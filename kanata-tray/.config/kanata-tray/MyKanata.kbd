@@ -1,10 +1,10 @@
 (defsrc
-  esc     f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12
+  esc     f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12  del
   grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
   tab     q    w    e    r    t       y    u    i    o    p       [    ]    \
   caps    a    s    d    f    g       h    j    k    l    ;       '    ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  fn  lctl  lalt  lmet           spc            rmet  ralt
+  lctl    lalt    lmet           spc            rmet    fn
 )
 
 (defcfg
@@ -13,21 +13,21 @@
 )
 
 (deflayer default
-  caps    🔅   🔆   mctl sls  dtn     dnd  ◀◀   ▶⏸   ▶▶   🔇      🔉   🔊
+  caps    🔅   🔆   home end  sys   sleep  ◀◀   ▶⏸   ▶▶   🔇      🔉   🔊   del
   grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
   @tab    q    w    e    r    t       y    u    i    o    p       [    ]    \
-  @esc    a    s    d    f    g       h    j    k    l    ;       '    ret
+  @esc    a    s    d    f    g       h    j    k    l    ;       '    @ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  fn  lctl  lalt  lmet           @spc           rmet  ralt
+  lctl    lalt    lmet          @spc            rmet    fn
 )
 
 (deflayer symbol
-  caps    f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12
+  caps    f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12  del
   grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
   tab     S-6  [    ]    S-8  +       S-7  S-3  S-[  S-]  S-4     [    ]    \
   esc     S-1  S-,  S-.  -    =       S-5  S-\  S-9  S-0  S-/     S-2  ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  fn  lctl  lalt  lmet           spc            rmet  ralt
+  lctl    lalt    lmet           spc            rmet    fn
 )
 
 (defvar
@@ -39,5 +39,6 @@
 (defalias
   spc (tap-hold $tap-time $hold-time spc (layer-toggle symbol))
   esc (tap-hold $tap-time $slow-hold-time esc lctl)
+  ret (tap-hold $tap-time $slow-hold-time ret rctl)
   tab (tap-hold $tap-time $slow-hold-time tab lalt)
 )

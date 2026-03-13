@@ -37,5 +37,5 @@ autorun = true
 # tcp_port = 1234
 # extra_args = ['-n', '-c=~/.config/kanata/another.kbd']
 
-# [presets.'test cfg']
-# kanata_config = '~/.config/kanata/test.kbd'
+[presets.'bluetooth cfg']
+kanata_config = '/home/xjin/.config/kanata-tray/MyKanata.kbd'
