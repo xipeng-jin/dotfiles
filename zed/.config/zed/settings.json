@@ -7,6 +7,38 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "ssh_connections": [
+    {
+      "host": "home-dev-server",
+      "username": "xjin",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/xjin/Program/dev/googoo/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/xjin/Program/dev/xpcode/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
   "auto_signature_help": true,
   "autoscroll_on_clicks": false,
   "sticky_scroll": {
@@ -27,9 +59,11 @@
     },
   },
   "git_panel": {
+    "dock": "left",
     "tree_view": true,
   },
   "agent": {
+    "dock": "right",
     "default_profile": "write",
     "default_model": {
       "enable_thinking": false,

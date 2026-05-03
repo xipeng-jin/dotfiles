@@ -4,7 +4,7 @@
   tab     q    w    e    r    t       y    u    i    o    p       [    ]    \
   caps    a    s    d    f    g       h    j    k    l    ;       '    ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  lctl    lalt    lmet           spc            rmet    fn
+  lctl    lmet    lalt           spc            ralt    fn
 )
 
 (defcfg
@@ -15,10 +15,10 @@
 (deflayer default
   caps    🔅   🔆   home end  sys   sleep  ◀◀   ▶⏸   ▶▶   🔇      🔉   🔊   del
   grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
-  @tab    q    w    e    r    t       y    u    i    o    p       [    ]    \
+  tab     q    w    e    r    t       y    u    i    o    p       [    ]    \
   @esc    a    s    d    f    g       h    j    k    l    ;       '    @ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  lctl    lalt    lmet          @spc            rmet    fn
+  lctl    lmet    lalt          @spc            rmet    fn
 )
 
 (deflayer symbol
@@ -27,7 +27,7 @@
   tab     S-6  [    ]    S-8  +       S-7  S-3  S-[  S-]  S-4     [    ]    \
   esc     S-1  S-,  S-.  -    =       S-5  S-\  S-9  S-0  S-/     S-2  ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  lctl    lalt    lmet           spc            rmet    fn
+  lctl    lmet    lalt           spc            rmet    fn
 )
 
 (defvar
@@ -40,5 +40,4 @@
   spc (tap-hold $tap-time $hold-time spc (layer-toggle symbol))
   esc (tap-hold $tap-time $slow-hold-time esc lctl)
   ret (tap-hold $tap-time $slow-hold-time ret rctl)
-  tab (tap-hold $tap-time $slow-hold-time tab lalt)
 )

@@ -18,7 +18,7 @@ autorestart_on_crash = false # (default: false)
 enabled = true
 keyboard_device = "auto:kanata"  # or "/dev/input/eventX"
 pointer_device = "auto:touchpad" # or exact Hyprland mouse name
-trigger_key = "KEY_FN"           # KEY_FN | KEY_LEFTALT | KEY_RIGHTALT
+trigger_key = "KEY_ESC"          # KEY_ALT
 
 # [defaults.hooks]
 # Hooks allow running custom commands on specific events (e.g. starting preset).
@@ -30,7 +30,7 @@ trigger_key = "KEY_FN"           # KEY_FN | KEY_LEFTALT | KEY_RIGHTALT
 # '*' = 'other_layers.ico'
 
 [presets.'main cfg']
-kanata_config = '/home/xjin/.config/kanata-tray/mykanata-linux.kbd'
+kanata_config = '/home/xjin/.config/kanata-tray/mykanata-framework.kbd'
 autorun = true
 # kanata_executable = ''
 # layer_icons = {  }

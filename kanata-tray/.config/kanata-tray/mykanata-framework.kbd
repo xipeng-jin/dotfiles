@@ -1,0 +1,63 @@
+(defsrc
+  esc     f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12  del
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     q    w    e    r    t       y    u    i    o    p       [    ]    \
+  caps    a    s    d    f    g       h    j    k    l    ;       '    ret
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  lctl  fn  lmet  lalt           spc            ralt  rctl      ◀  ▲  ▼  ▶ 
+)
+
+(defcfg
+  linux-dev (
+    /dev/input/by-path/platform-i8042-serio-0-event-kbd
+    /dev/input/by-path/pci-0000:00:15.1-platform-i2c_designware.1-event
+  )
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+)
+
+(deflayer default
+  _       🔇   🔉   🔊   ◀◀   ▶⏸     ▶▶    🔅   🔆  @oma  @int    ⎙    @lck  del
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  @tab    q    w    e    r    t       y    u    i    o    p       [    ]    \
+  @esc    a    s    d    f    g       h    j    k    l    ;       '    @ret
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  lctl  fn  lmet  lalt           @spc           rmet  rctl  _  _  _  _
+)
+
+(deflayer symbol
+  _       f1   f2   f3   f4   f5      f6   f7   f8   f9   f10     f11  f12  del
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     S-6  S-[  S-]  S-8  +       S-7  S-3  [    ]    S-4     [    ]    \
+  esc     S-1  S-,  S-.  -    =       S-5  S-\  S-9  S-0  S-/     S-2  ret
+  lsft    z    x    c    v    b       n    m    ,    .    /       rsft
+  lctl  fn  lmet  lalt           spc            rmet  rctl  home  pgup  pgdn  end
+)
+
+(deflayer nav
+  _       🔇   🔉   🔊   ◀◀   ▶⏸     ▶▶    🔅   🔆  @oma  @int    ⎙    @lck  del
+  grv     1    2    3    4    5       6    7    8    9    0       -    =    bspc
+  tab     XX   XX   XX   XX   XX      XX   XX   mwd  mwu  XX      XX   XX   XX
+  esc     XX   XX   XX   XX   XX      ◀    ▼    ▲    ▶    XX      XX   ret
+  lsft    XX   XX   XX   XX   XX      XX   XX   XX   XX   XX      rsft
+  lctl  fn  lmet  lalt           spc            rmet  rctl  home  pgup  pgdn  end
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+  slow-hold-time 250
+)
+
+(defalias
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle symbol))
+  tab (tap-hold $tap-time $hold-time tab (layer-toggle nav))
+  esc (tap-hold $tap-time $slow-hold-time esc lctl)
+  ret (tap-hold $tap-time $slow-hold-time ret rctl)
+
+  int C-c
+  ;; Omarchy Menu
+  oma M-A-spc
+  ;; Lock the screen
+  lck M-C-l
+)
