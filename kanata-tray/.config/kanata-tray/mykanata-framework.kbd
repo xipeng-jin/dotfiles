@@ -22,7 +22,7 @@
   @tab    q    w    e    r    t       y    u    i    o    p       [    ]    \
   @esc    a    s    d    f    g       h    j    k    l    ;       '    @ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  lctl  fn  lmet  lalt           @spc           rmet  rctl  _  _  _  _
+  lctl  fn  lmet  lalt           @spc           ralt  rctl  _  _  _  _
 )
 
 (deflayer symbol
@@ -31,7 +31,7 @@
   tab     S-6  S-[  S-]  S-8  +       S-7  S-3  [    ]    S-4     [    ]    \
   esc     S-1  S-,  S-.  -    =       S-5  S-\  S-9  S-0  S-/     S-2  ret
   lsft    z    x    c    v    b       n    m    ,    .    /       rsft
-  lctl  fn  lmet  lalt           spc            rmet  rctl  home  pgup  pgdn  end
+  lctl  fn  lmet  lalt           spc            ralt  rctl  home  pgup  pgdn  end
 )
 
 (deflayer nav
@@ -40,7 +40,7 @@
   tab     XX   XX   XX   XX   XX      XX   XX   mwd  mwu  XX      XX   XX   XX
   esc     XX   XX   XX   XX   XX      ◀    ▼    ▲    ▶    XX      XX   ret
   lsft    XX   XX   XX   XX   XX      XX   XX   XX   XX   XX      rsft
-  lctl  fn  lmet  lalt           spc            rmet  rctl  home  pgup  pgdn  end
+  lctl  fn  lmet  lalt           spc            ralt  rctl  home  pgup  pgdn  end
 )
 
 (defvar

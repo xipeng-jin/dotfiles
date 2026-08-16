@@ -14,13 +14,17 @@ confirm-close-surface=false
 resize-overlay = never
 gtk-toolbar-style = flat
 
-cursor-style-blink = false
 # Cursor styling
+cursor-style-blink = false
 cursor-style = "block"
 
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)
 shell-integration-features = no-cursor,ssh-env
+
+# Notificaiton
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = no-bell,notify
 
 # Keyboard bindings
 keybind = shift+insert=paste_from_clipboard
