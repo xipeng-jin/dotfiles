@@ -1,0 +1,67 @@
+{
+  // UI Font. Use ".SystemUIFont" to use the default system font (SF Pro on macOS),
+  // or ".ZedSans" for the bundled default (currently IBM Plex)
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "ssh_connections": [
+    {
+      "host": "asus-fedora",
+      "username": "xjin",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/xjin/Projects/zed/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "ui_font_family": ".ZedSans",
+  "ui_font_weight": 400.0, // Font weight in standard CSS units from 100 to 900.
+  "ui_font_size": 14.0,
+
+  // Buffer Font - Used by editor buffers
+  // use ".ZedMono" for the bundled default monospace (currently Lilex)
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_weight": 380.0,
+  "buffer_font_size": 13.0,
+
+  "terminal": {
+    "font_size": 12.0,
+    "font_family": "JetBrainsMono Nerd Font"
+  },
+  "diff_view_style": "unified",
+  "session": { "trust_all_worktrees": true },
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "agent_servers": {
+    "codex-acp": { "type": "registry" },
+    "claude-acp": { "type": "registry" },
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+
+  "lsp": {
+      "rust-analyzer": {
+        "initialization_options": {
+          "inlayHints": {
+            "maxLength": null,
+            "lifetimeElisionHints": {
+              "enable": "skip_trivial",
+              "useParameterNames": true
+            },
+            "closureReturnTypeHints": {
+              "enable": "always"
+            }
+          }
+        }
+      }
+    },
+}
